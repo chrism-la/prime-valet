@@ -5,23 +5,23 @@ import { motion } from 'framer-motion';
 const steps = [
     {
         number: '01',
-        title: 'Request',
-        text: 'Tell us your location, event type, expected traffic, arrival window, and service requirements.',
+        title: 'Contact Us',
+        text: 'Share the date, location, event type, and an estimate of how many guests or vehicles you expect.',
     },
     {
         number: '02',
-        title: 'Plan',
-        text: 'We structure staffing, vehicle flow, guest touchpoints, and communication around the property.',
+        title: 'Talk It Through',
+        text: 'We’ll go over the details, answer your questions, and discuss what kind of valet setup makes sense.',
     },
     {
         number: '03',
-        title: 'Arrive',
-        text: 'Prime attendants arrive prepared, uniformed, and ready to control the first guest movement.',
+        title: 'Get Ready',
+        text: 'Our attendants arrive in uniform with the information needed for your event or location.',
     },
     {
         number: '04',
-        title: 'Execute',
-        text: 'The team manages arrivals, vehicle handling, departures, and on-site coordination through closeout.',
+        title: 'Provide Service',
+        text: 'We greet guests, park vehicles, and help departures move as smoothly as possible.',
     },
 ];
 
@@ -33,23 +33,27 @@ export default function Process() {
                     initial={{ opacity: 0, x: -56 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{
+                        duration: 0.8,
+                        ease: [0.22, 1, 0.36, 1],
+                    }}
                     className="grid gap-12 border-b border-(--color-border) pb-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:pb-24"
                 >
                     <div>
                         <div className="mb-8 flex items-center gap-4">
                             <span className="h-px w-12 bg-(--color-accent)" />
-                            <p className="text-xs font-black tracking-[0.28em] text-(--color-accent) uppercase">Service Flow</p>
+
+                            <p className="text-xs font-black tracking-[0.28em] text-(--color-accent) uppercase">How It Works</p>
                         </div>
 
                         <h2 className="max-w-4xl text-5xl leading-[0.95] font-black tracking-[-0.055em] text-(--color-ink) sm:text-6xl lg:text-7xl 2xl:text-8xl">
-                            A controlled process from first call to final key.
+                            A simple process from first conversation to event day.
                         </h2>
                     </div>
 
                     <div className="flex items-end lg:justify-end">
                         <p className="max-w-2xl text-base leading-8 font-medium text-(--color-muted) sm:text-lg lg:text-xl lg:leading-9">
-                            Prime keeps the valet operation simple for the client and structured for the team. Every service is planned around guest movement, site constraints, staffing, and timing.
+                            We keep planning straightforward. Tell us what you need, review the details with us, and we’ll work with you to prepare for the day.
                         </p>
                     </div>
                 </motion.div>
@@ -59,7 +63,10 @@ export default function Process() {
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         viewport={{ once: true, amount: 0.35 }}
-                        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{
+                            duration: 1.1,
+                            ease: [0.22, 1, 0.36, 1],
+                        }}
                         className="absolute top-18 left-0 hidden h-px w-full origin-left bg-(--color-border) lg:block"
                     />
 
@@ -67,7 +74,10 @@ export default function Process() {
                         {steps.map((step, index) => (
                             <motion.article
                                 key={step.number}
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -42 : 42 }}
+                                initial={{
+                                    opacity: 0,
+                                    x: index % 2 === 0 ? -42 : 42,
+                                }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, amount: 0.35 }}
                                 transition={{

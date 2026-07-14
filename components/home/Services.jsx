@@ -7,32 +7,32 @@ const services = [
     {
         number: '01',
         title: 'Private Events',
-        text: 'Controlled arrivals and departures for weddings, private parties, galas, and milestone events.',
+        text: 'Valet parking support for weddings, parties, celebrations, and other private gatherings.',
     },
     {
         number: '02',
         title: 'Restaurants',
-        text: 'Professional curbside valet support designed to improve guest flow and protect the first impression.',
+        text: 'Friendly curbside service that helps guests arrive and leave with less hassle.',
     },
     {
         number: '03',
         title: 'Hotels & Hospitality',
-        text: 'Reliable valet staffing for hospitality properties that require consistency, presentation, and care.',
+        text: 'Dependable attendants for hotels and hospitality locations that need regular parking support.',
     },
     {
         number: '04',
-        title: 'Corporate Functions',
-        text: 'Organized parking operations for executive meetings, brand activations, office events, and company gatherings.',
+        title: 'Business Events',
+        text: 'Organized valet service for meetings, company gatherings, and other business occasions.',
     },
     {
         number: '05',
         title: 'Venues',
-        text: 'Scalable valet coordination for venues, lounges, banquet halls, and high-traffic event locations.',
+        text: 'Flexible parking help for banquet halls, event spaces, lounges, and similar locations.',
     },
     {
         number: '06',
-        title: 'Executive Properties',
-        text: 'Discreet, polished valet support for private residences, estates, and premium property environments.',
+        title: 'Private Properties',
+        text: 'Straightforward valet support for homes, apartment communities, and private locations.',
     },
 ];
 
@@ -44,22 +44,27 @@ export default function Services() {
                     initial={{ opacity: 0, x: 56 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{
+                        duration: 0.8,
+                        ease: [0.22, 1, 0.36, 1],
+                    }}
                     className="grid gap-12 border-b border-white/15 pb-16 lg:grid-cols-[1fr_0.85fr] lg:gap-20 lg:pb-24"
                 >
                     <div>
                         <div className="mb-8 flex items-center gap-4">
                             <span className="h-px w-12 bg-(--color-accent)" />
+
                             <p className="text-xs font-black tracking-[0.28em] text-(--color-accent) uppercase">Services</p>
                         </div>
 
-                        <h2 className="max-w-4xl text-5xl leading-[0.95] font-black tracking-[-0.055em] sm:text-6xl lg:text-7xl 2xl:text-8xl">Valet coverage built for controlled movement.</h2>
+                        <h2 className="max-w-4xl text-5xl leading-[0.95] font-black tracking-[-0.055em] sm:text-6xl lg:text-7xl 2xl:text-8xl">
+                            Valet service for events, businesses, and local venues.
+                        </h2>
                     </div>
 
                     <div className="flex items-end lg:justify-end">
                         <p className="max-w-2xl text-base leading-8 font-medium text-white/68 sm:text-lg lg:text-xl lg:leading-9">
-                            Prime supports locations where timing, presentation, and traffic flow matter. Each service is structured around clean communication, trained attendants, and a precise
-                            arrival-to-departure system.
+                            Prime offers practical parking support based on your location, guest count, and schedule. We keep the process simple and work with you to plan what is needed.
                         </p>
                     </div>
                 </motion.div>
@@ -115,15 +120,16 @@ export default function Services() {
                     initial={{ opacity: 0, x: -42 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
-                    transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{
+                        duration: 0.75,
+                        ease: [0.22, 1, 0.36, 1],
+                    }}
                     className="flex flex-col gap-8 pt-12 sm:pt-14 lg:flex-row lg:items-center lg:justify-between"
                 >
-                    <p className="max-w-2xl text-base leading-8 font-medium text-white/66">
-                        Need valet service for a specific venue, private property, or event format? Prime can structure staffing and flow around your location.
-                    </p>
+                    <p className="max-w-2xl text-base leading-8 font-medium text-white/66">Have a different type of event or location? Contact us and we can talk through the details.</p>
 
                     <Link href="/contact" className="btn-prime btn-primary group w-fit">
-                        <span>Plan Service</span>
+                        <span>Request Service</span>
                         <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                     </Link>
                 </motion.div>

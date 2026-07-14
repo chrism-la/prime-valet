@@ -5,26 +5,26 @@ import { motion } from 'framer-motion';
 const features = [
     {
         number: '01',
-        title: 'Professional Staff',
-        text: 'Uniformed attendants trained to represent your property with clean presentation, clear communication, and calm execution.',
+        title: 'Friendly Staff',
+        text: 'Uniformed attendants who are ready to greet guests, answer questions, and help keep the parking process organized.',
         direction: 'left',
     },
     {
         number: '02',
-        title: 'Organized Traffic Flow',
-        text: 'Structured arrivals, controlled vehicle movement, and efficient departures designed to keep your operation moving.',
+        title: 'Organized Parking',
+        text: 'A simple plan for arrivals, vehicle placement, and departures based on the needs of your event or location.',
         direction: 'right',
     },
     {
         number: '03',
-        title: 'Guest Experience',
-        text: 'A polished first and final touchpoint that helps every guest arrive with confidence and leave with ease.',
+        title: 'Guest-Focused Service',
+        text: 'A helpful first and last point of contact designed to make parking easier for you and your guests.',
         direction: 'left',
     },
     {
         number: '04',
-        title: 'Reliable Operations',
-        text: 'Consistent staffing, dependable coordination, and a service system built for private events, venues, restaurants, and executive properties.',
+        title: 'Dependable Support',
+        text: 'Clear communication, prepared attendants, and straightforward service for events, restaurants, venues, and local businesses.',
         direction: 'right',
     },
 ];
@@ -43,18 +43,18 @@ export default function Experience() {
                     <div>
                         <div className="mb-8 flex items-center gap-4">
                             <span className="h-px w-12 bg-(--color-accent)" />
+
                             <p className="text-xs font-black tracking-[0.28em] text-(--color-accent) uppercase">Our Approach</p>
                         </div>
 
                         <h2 className="max-w-3xl text-5xl leading-[0.95] font-black tracking-[-0.055em] text-(--color-ink) sm:text-6xl lg:text-7xl 2xl:text-8xl">
-                            10+ years of professional valet operations.
+                            Simple, reliable valet service from start to finish.
                         </h2>
                     </div>
 
                     <div className="flex items-end lg:justify-end">
                         <p className="max-w-2xl text-base leading-8 font-medium text-(--color-muted) sm:text-lg lg:text-xl lg:leading-9">
-                            Prime Valet Parking Services brings a disciplined operating model to every location: prepared staff, precise movement, clean communication, and a guest experience that
-                            reflects the standard of your event or property.
+                            Prime Valet Parking Services focuses on the basics that matter: showing up prepared, treating guests well, communicating clearly, and helping parking run smoothly.
                         </p>
                     </div>
                 </div>
@@ -66,10 +66,16 @@ export default function Experience() {
                         return (
                             <motion.div
                                 key={feature.number}
-                                initial={{ opacity: 0, x: fromLeft ? -64 : 64 }}
+                                initial={{
+                                    opacity: 0,
+                                    x: fromLeft ? -64 : 64,
+                                }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, amount: 0.35 }}
-                                transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+                                transition={{
+                                    duration: 0.75,
+                                    ease: [0.22, 1, 0.36, 1],
+                                }}
                                 className="grid gap-8 py-10 sm:py-12 lg:grid-cols-2 lg:gap-16 lg:py-14"
                             >
                                 <div className={fromLeft ? '' : 'lg:col-start-2'}>
